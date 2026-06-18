@@ -44,6 +44,11 @@ class DETRVAE(nn.Module):
             aux_loss: True if auxiliary decoding losses (loss at each decoder layer) are to be used.
         """
         super().__init__()
+        #注释：num_queries是DETRVAE模型的查询数量，camera_names是相机名称，transformer是transformer模型，
+        # encoder是encoder模型，hidden_dim是hidden维度，action_head是动作头，is_pad_head是is_pad头，
+        # query_embed是查询嵌入，input_proj是输入投影，backbones是backbone模型，latent_dim是latent维度，
+        # cls_embed是cls嵌入，encoder_action_proj是动作嵌入，encoder_joint_proj是关节嵌入，latent_proj是latent投影，
+        # latent_out_proj是latent输出投影，additional_pos_embed是额外位置嵌入
         self.num_queries = num_queries
         self.camera_names = camera_names
         self.transformer = transformer
